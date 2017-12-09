@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio for Mac
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robota", "Robota.csproj", "{4C018D39-EFC8-A98D-6075-38D43EB09977}"
 EndProject
 Global
