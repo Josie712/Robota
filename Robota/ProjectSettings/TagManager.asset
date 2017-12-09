@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: TorsoLayer
+    uniqueID: 3900370279
+    locked: 0
+  - name: HeadLayer
+    uniqueID: 2996754443
+    locked: 0
+  - name: LimbsLayer
+    uniqueID: 1671061751
+    locked: 0
