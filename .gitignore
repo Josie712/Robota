@@ -1,3 +1,4 @@
+/Robota/[Ll]ibrary/
 /Robota/[Tt]emp/
 /Robota/[Oo]bj/
 /Robota/[Bb]uild/
@@ -45,3 +46,7 @@ sysinfo.txt
 
 # Build related files
 *.buildreport
+*_build_Data/
+
+# ViM files
+*.swp
