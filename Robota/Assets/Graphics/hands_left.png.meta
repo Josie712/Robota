@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 80f024cbf70d54656a4aa617e9126a3c
-timeCreated: 1512065720
+timeCreated: 1513018296
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hands_left_0
+    21300002: hands_left_1
+    21300004: hands_left_2
+    21300006: hands_left_3
+    21300008: hands_left_4
+    21300010: hands_left_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -76,7 +82,91 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hands_left_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 606
+        width: 1156
+        height: 1883
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hands_left_1
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 673
+        width: 805
+        height: 1731
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hands_left_2
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 627
+        width: 447
+        height: 1777
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hands_left_3
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 396
+        width: 1057
+        height: 2076
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hands_left_4
+      rect:
+        serializedVersion: 2
+        x: 4026
+        y: 64
+        width: 813
+        height: 2468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hands_left_5
+      rect:
+        serializedVersion: 2
+        x: 4954
+        y: 256
+        width: 1492
+        height: 2087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
