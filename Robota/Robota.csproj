@@ -240,7 +240,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Email\Email.cs" />
+    <Compile Include="Assets\Scripts\Email\ReceivedEmail.cs" />
+    <Compile Include="Assets\Scripts\Email\SentEmail.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\Scripts\MainScript.cs" />
     <Compile Include="Assets\Scripts\OpenMainMenu.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
   </ItemGroup>
