@@ -210,6 +210,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1035491677}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1482080436}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1733844610}
+        m_MethodName: ResetQuestions
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2486143
@@ -898,7 +931,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -954,7 +987,7 @@ GameObject:
   - component: {fileID: 120329248}
   - component: {fileID: 120329247}
   m_Layer: 0
-  m_Name: Balance
+  m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1174,7 +1207,7 @@ GameObject:
   - component: {fileID: 161881204}
   - component: {fileID: 161881203}
   m_Layer: 0
-  m_Name: LevelManager
+  m_Name: LevelSettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1188,11 +1221,102 @@ MonoBehaviour:
   m_GameObject: {fileID: 161881202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da5c1dc6bcfe44dd8fc71d040b70660, type: 3}
+  m_Script: {fileID: 11500000, guid: 999c3b017f808494f8e2c34ebaf6d29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  received: []
-  sent: []
+  receivedEmails: []
+  sentEmails: []
+  baseRobotStats:
+    decisiveness: 3
+    peopleSkills: 3
+    compartmentalization: 3
+  robotParts:
+  - stats:
+      decisiveness: 0
+      peopleSkills: 1
+      compartmentalization: 0
+    sprite: {fileID: 21300000, guid: 2992054b522b64ff8bb919dd3b66c53e, type: 3}
+  - stats:
+      decisiveness: -1
+      peopleSkills: 1
+      compartmentalization: 1
+    sprite: {fileID: 21300006, guid: 2992054b522b64ff8bb919dd3b66c53e, type: 3}
+  - stats:
+      decisiveness: 1
+      peopleSkills: 0
+      compartmentalization: -1
+    sprite: {fileID: 21300004, guid: 2992054b522b64ff8bb919dd3b66c53e, type: 3}
+  - stats:
+      decisiveness: 1
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 21300010, guid: 2992054b522b64ff8bb919dd3b66c53e, type: 3}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 1
+      peopleSkills: -2
+      compartmentalization: 2
+    sprite: {fileID: 21300000, guid: 9a686eacacb2446fb965fccc6b8fda16, type: 3}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  - stats:
+      decisiveness: 0
+      peopleSkills: 0
+      compartmentalization: 0
+    sprite: {fileID: 0}
+  questions: []
+  incomingMailObject: {fileID: 61356357}
+  sentMailObject: {fileID: 1413476131}
+  decisivenessBar: {fileID: 668543657}
+  peopleSkillsBar: {fileID: 1765730640}
+  compartmentalizationBar: {fileID: 428945891}
 --- !u!4 &161881204
 Transform:
   m_ObjectHideFlags: 0
@@ -1294,7 +1418,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1748,7 +1872,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2109,7 +2233,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 317969666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -116.79998, y: 260.6, z: 0}
+  m_LocalPosition: {x: -116.79997, y: 260.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035491678}
@@ -2631,7 +2755,7 @@ GameObject:
   - component: {fileID: 402409904}
   - component: {fileID: 402409903}
   m_Layer: 0
-  m_Name: Question
+  m_Name: QuestionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2644,7 +2768,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 402409901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -116.79998, y: 199.37001, z: 0}
+  m_LocalPosition: {x: -116.79997, y: 199.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035491678}
@@ -3448,7 +3572,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3788,7 +3912,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4006,7 +4130,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4528,7 +4652,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5190,7 +5314,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5323,7 +5447,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5456,7 +5580,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7701,7 +7825,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8115,7 +8239,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8886,17 +9010,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1423532029}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1741140555}
         m_MethodName: SetActive
         m_Mode: 6
@@ -9105,7 +9218,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9814,7 +9927,7 @@ GameObject:
   - component: {fileID: 1423532032}
   - component: {fileID: 1423532031}
   m_Layer: 0
-  m_Name: VisualConst
+  m_Name: Construction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10790,7 +10903,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11426,11 +11539,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c7e00deb7535947b84ddd0ea53bf4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 658049370}
-  torso: {fileID: 1097419794}
-  arms: {fileID: 1710762063}
-  legs: {fileID: 1792631065}
+  levelSettings: {fileID: 161881203}
+  headObject: {fileID: 658049370}
+  torsoObject: {fileID: 1097419794}
+  armsObject: {fileID: 1710762063}
+  legsObject: {fileID: 1792631065}
   nextButton: {fileID: 323336866}
+  decisivenessBar: {fileID: 668543657}
+  peopleSkillsBar: {fileID: 1765730640}
+  compertmentalizationBar: {fileID: 428945891}
+  questionHeaderObject: {fileID: 317969666}
+  questionTextObject: {fileID: 402409901}
   blankSprite: {fileID: 21300010, guid: 73d45df3779d9465b9169c6881037049, type: 3}
 --- !u!1 &1741140555
 GameObject:
@@ -12386,7 +12505,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13060,7 +13179,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: EnableNextButtonIfFullyBuilt
+        m_MethodName: UserClickPart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
