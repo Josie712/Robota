@@ -137,7 +137,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2486140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 213.6, y: 199.52673, z: 0}
+  m_LocalPosition: {x: 213.6, y: 166.73882, z: 0}
   m_LocalScale: {x: 1.581028, y: 1.581028, z: 1.581028}
   m_Children:
   - {fileID: 181154186}
@@ -233,7 +233,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1733844610}
-        m_MethodName: ResetQuestions
+        m_MethodName: XButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1311,7 +1311,73 @@ MonoBehaviour:
       peopleSkills: 0
       compartmentalization: 0
     sprite: {fileID: 0}
-  questions: []
+  questions:
+  - text: Coasters are a necessity for a camping vacation.
+    answers:
+    - text: Agree
+      stats:
+        decisiveness: 1
+        peopleSkills: 0
+        compartmentalization: 0
+    - text: Disagree
+      stats:
+        decisiveness: 0
+        peopleSkills: 0
+        compartmentalization: 1
+  - text: Dogs should be allowed to choose the colour of their own bowl.
+    answers:
+    - text: Agree
+      stats:
+        decisiveness: 0
+        peopleSkills: 1
+        compartmentalization: 0
+    - text: Disagree
+      stats:
+        decisiveness: 1
+        peopleSkills: 0
+        compartmentalization: 0
+  - text: States rights should be subordinate to federal government.
+    answers:
+    - text: Agree
+      stats:
+        decisiveness: 0
+        peopleSkills: -1
+        compartmentalization: 0
+    - text: Disagree
+      stats:
+        decisiveness: 0
+        peopleSkills: 0
+        compartmentalization: 1
+  - text: I would feel horrible wearing socks of different colour to work.
+    answers:
+    - text: Agree
+      stats:
+        decisiveness: 1
+        peopleSkills: 0
+        compartmentalization: 0
+    - text: Disagree
+      stats:
+        decisiveness: 0
+        peopleSkills: 0
+        compartmentalization: -1
+  - text: 'Pick a type of donut you would like to order on an exotic island in the
+      middle of Pacific:'
+    answers:
+    - text: with a dark chocolate filling
+      stats:
+        decisiveness: 0
+        peopleSkills: 0
+        compartmentalization: 1
+    - text: strawberry glaze
+      stats:
+        decisiveness: 0
+        peopleSkills: 1
+        compartmentalization: 0
+    - text: no filling, no glaze
+      stats:
+        decisiveness: 1
+        peopleSkills: 0
+        compartmentalization: 0
   incomingMailObject: {fileID: 61356357}
   sentMailObject: {fileID: 1413476131}
   decisivenessBar: {fileID: 668543657}
@@ -2308,7 +2374,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 323336866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -165, y: -194.52673, z: 0}
+  m_LocalPosition: {x: -165, y: -161.73882, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 737071778}
@@ -2359,9 +2425,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1482080436}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1733844610}
+        m_MethodName: NextButtonClicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2369,17 +2435,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1035491677}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -2618,7 +2673,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 380298536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.087936, y: 48.57515, z: 0}
+  m_LocalPosition: {x: 6.0199966, y: 48.57515, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1717190645}
@@ -2628,8 +2683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40.087936, y: 48.57515}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 6.02, y: 48.57515}
+  m_SizeDelta: {x: 252.21, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380298538
 MonoBehaviour:
@@ -2672,7 +2727,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1733844610}
+        m_MethodName: Answer1ButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -3302,7 +3368,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 448866299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.84, y: -33.660004, z: 0}
+  m_LocalPosition: {x: 265.15997, y: 141.36673, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1129811993}
@@ -4234,7 +4300,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 537989304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70, y: 0, z: 0}
+  m_LocalPosition: {x: -116.105, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1926121460}
@@ -4720,7 +4786,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 637071268}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.087936, y: -38.224842, z: 0}
+  m_LocalPosition: {x: 6.0199966, y: -38.224842, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 690971719}
@@ -4730,8 +4796,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40.087936, y: -38.224842}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 6.02, y: -38.224842}
+  m_SizeDelta: {x: 252.21, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637071270
 MonoBehaviour:
@@ -4774,7 +4840,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1733844610}
+        m_MethodName: Answer3ButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -5181,7 +5258,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 690971718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70, y: 0, z: 0}
+  m_LocalPosition: {x: -116.105, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 722543836}
@@ -6285,7 +6362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &868853997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6293,8 +6370,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 868853996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 467.5, y: 263, z: 0}
+  m_LocalScale: {x: 1.16875, y: 1.16875, z: 1.16875}
   m_Children:
   - {fileID: 1473157172}
   - {fileID: 594268190}
@@ -6401,7 +6478,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 875568084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.399994, y: 0, z: 0}
+  m_LocalPosition: {x: -2.399994, y: -0.000015258789, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1741140556}
@@ -6719,7 +6796,7 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -7493,7 +7570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1035491678
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7501,7 +7578,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1035491677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 197.19998, y: -175.05673, z: 0}
+  m_LocalPosition: {x: 197.20001, y: -142.26881, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 317969667}
@@ -7724,7 +7801,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -8307,7 +8384,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1115049681}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.087936, y: 4.2751274, z: 0}
+  m_LocalPosition: {x: 6.0199966, y: 4.2751274, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 537989305}
@@ -8317,8 +8394,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -40.087936, y: 4.2751274}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 6.02, y: 4.2751274}
+  m_SizeDelta: {x: 252.21, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1115049683
 MonoBehaviour:
@@ -8361,7 +8438,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1733844610}
+        m_MethodName: Answer2ButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -8506,12 +8594,14 @@ MonoBehaviour:
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Main \nMenu"
+  m_Text: 'Main
+
+    Menu'
 --- !u!222 &1129811995
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8637,7 +8727,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1170113272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -147.87, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464113944}
@@ -8948,7 +9038,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1295324214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.899994, y: 41.800003, z: 0}
+  m_LocalPosition: {x: 25.899994, y: -133.22673, z: 0}
   m_LocalScale: {x: 0.79999995, y: 0.7, z: 1}
   m_Children:
   - {fileID: 964318277}
@@ -9324,7 +9414,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -9466,7 +9556,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -10361,7 +10451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1482080437
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10369,7 +10459,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1482080436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 172.20297, y: -157.60675, z: 0}
+  m_LocalPosition: {x: 172.203, y: -124.81883, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 609354815}
@@ -10563,7 +10653,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1541829454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -147.87, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 529829730}
@@ -11454,7 +11544,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1717190644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70, y: 0, z: 0}
+  m_LocalPosition: {x: -116.105, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1323721281}
@@ -11548,8 +11638,13 @@ MonoBehaviour:
   decisivenessBar: {fileID: 668543657}
   peopleSkillsBar: {fileID: 1765730640}
   compertmentalizationBar: {fileID: 428945891}
+  partButtonsObject: {fileID: 1482080436}
+  questionsPanelObject: {fileID: 1035491677}
   questionHeaderObject: {fileID: 317969666}
   questionTextObject: {fileID: 402409901}
+  answer1Object: {fileID: 380298536}
+  answer2Object: {fileID: 1115049681}
+  answer3Object: {fileID: 637071268}
   blankSprite: {fileID: 21300010, guid: 73d45df3779d9465b9169c6881037049, type: 3}
 --- !u!1 &1741140555
 GameObject:
@@ -11568,7 +11663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1741140556
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11576,8 +11671,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741140555}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 467.5, y: 263, z: 0}
-  m_LocalScale: {x: 1.16875, y: 1.16875, z: 1.16875}
+  m_LocalPosition: {x: 335, y: 161, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1733844609}
   - {fileID: 875568085}
@@ -11659,7 +11754,7 @@ GameObject:
   - component: {fileID: 1745313911}
   - component: {fileID: 1745313910}
   m_Layer: 0
-  m_Name: BackButton (1)
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11956,7 +12051,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1801124185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -147.87, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1001786081}

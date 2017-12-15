@@ -1,16 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class OpenMainMenu : MonoBehaviour {
-
  
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            var gameObject = GameObject.Find("GameObject"); // The parent game object to toggle
-            gameObject.SetActive(true); //true or false
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    GameObject.Find("MainMenu").SetActive(true);
+        //}
     }
 }
