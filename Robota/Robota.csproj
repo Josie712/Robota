@@ -245,7 +245,6 @@
     <Compile Include="Assets\Scripts\Email\SentEmail.cs" />
     <Compile Include="Assets\Scripts\LevelSettings.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
-    <Compile Include="Assets\Scripts\OpenMainMenu.cs" />
     <Compile Include="Assets\Scripts\PlayAudio.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\RobotBuild.cs" />
@@ -254,6 +253,7 @@
     <Compile Include="Assets\Scripts\RobotConstruction\RobotPart.cs" />
     <Compile Include="Assets\Scripts\RobotConstruction\Stats.cs" />
     <Compile Include="Assets\Scripts\Utility.cs" />
+    <Compile Include="Assets\Scripts\VolumeManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\Pixel Font - Tripfive\_README.txt" />

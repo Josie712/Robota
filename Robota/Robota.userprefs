@@ -1,10 +1,9 @@
 ﻿<Properties StartupConfiguration="{4C018D39-EFC8-A98D-6075-38D43EB09977}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AudioPlay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/VolumeManager.cs">
     <Files>
       <File FileName="Assets/Scripts/QuitOnClick.cs" Line="19" Column="1" />
       <File FileName="Assets/Scripts/LoadSceneOnClick.cs" Line="6" Column="14" />
-      <File FileName="Assets/Scripts/OpenMainMenu.cs" Line="12" Column="2" />
-      <File FileName="Assets/Scripts/AudioPlay.cs" Line="35" Column="2" />
+      <File FileName="Assets/Scripts/VolumeManager.cs" Line="7" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
