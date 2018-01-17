@@ -22,9 +22,9 @@ public class RobotBuild : MonoBehaviour {
     public GameObject questionsPanelObject;
     public GameObject questionHeaderObject;
     public GameObject questionTextObject;
-    public GameObject answer1Object;
-    public GameObject answer2Object;
-    public GameObject answer3Object;
+    public GameObject answersObject;
+    public GameObject answerPrefab;
+    private List<GameObject> answers = new List<GameObject>();
 
     public Sprite blankSprite;
 
@@ -60,43 +60,32 @@ public class RobotBuild : MonoBehaviour {
         ResetQuestions();
     }
 
-    public void Answer1ButtonClicked()
+    public void AnswerButtonClicked(GameObject self)
     {
-        if (answer1Object.GetComponent<Toggle>().isOn) // switched on by user
+        if (self.GetComponent<Toggle>().isOn) // switched on by user
         {
-            answer2Object.GetComponent<Toggle>().isOn = false;
-            answer3Object.GetComponent<Toggle>().isOn = false;
+            UncheckOtherAnswers(self);
         }
-        else if (!answer2Object.GetComponent<Toggle>().isOn && !answer3Object.GetComponent<Toggle>().isOn) // last chosen answer switched off by user
+        else if (OtherAnswersAreUnchecked(self)) // last chosen answer switched off by user
         {
-            answer1Object.GetComponent<Toggle>().isOn = true; // switch it back on
+            self.GetComponent<Toggle>().isOn = true; // switch it back on
         }
     }
 
-    public void Answer2ButtonClicked()
+    private void UncheckOtherAnswers(GameObject self)
     {
-        if (answer2Object.GetComponent<Toggle>().isOn)
+        answers.ForEach((answer) =>
         {
-            answer1Object.GetComponent<Toggle>().isOn = false;
-            answer3Object.GetComponent<Toggle>().isOn = false;
-        }
-        else if (!answer1Object.GetComponent<Toggle>().isOn && !answer3Object.GetComponent<Toggle>().isOn)
-        {
-            answer2Object.GetComponent<Toggle>().isOn = true;
-        }
+            if (answer != self)
+            {
+                answer.GetComponent<Toggle>().isOn = false;
+            }
+        });
     }
 
-    public void Answer3ButtonClicked()
+    private bool OtherAnswersAreUnchecked(GameObject self)
     {
-        if (answer3Object.GetComponent<Toggle>().isOn)
-        {
-            answer1Object.GetComponent<Toggle>().isOn = false;
-            answer2Object.GetComponent<Toggle>().isOn = false;
-        }
-        else if (!answer1Object.GetComponent<Toggle>().isOn && !answer2Object.GetComponent<Toggle>().isOn)
-        {
-            answer3Object.GetComponent<Toggle>().isOn = true;
-        }
+        return answers.All((answer) => answer == self || answer.GetComponent<Toggle>().isOn == false);
     }
 
     private void ResetQuestions()
@@ -153,37 +142,51 @@ public class RobotBuild : MonoBehaviour {
         questionHeaderObject.GetComponent<Text>().text = "Question " + (currentQuestionIndex + 1);
         questionTextObject.GetComponent<Text>().text = currentQuestion.text;
 
-        answer3Object.SetActive(false);
-        answer1Object.GetComponentInChildren<Text>().text = currentQuestion.answers[0].text;
-        answer2Object.GetComponentInChildren<Text>().text = currentQuestion.answers[1].text;
-        if (currentQuestion.answers.Length >= 3)
+        CreateAnswerObjects(currentQuestion);
+    }
+
+    private void CreateAnswerObjects(Question currentQuestion)
+    {
+        answers.ForEach<GameObject>(Destroy);
+        answers.Clear();
+
+        currentQuestion.answers.ForEach((answer) =>
         {
-            answer3Object.SetActive(true);
-            answer3Object.GetComponentInChildren<Text>().text = currentQuestion.answers[2].text;
-        }
+            GameObject answerObject = Instantiate(answerPrefab);
+            answers.Add(answerObject);
+            answerObject.SetActive(true);
+            Position(answerObject, answers.Count);
+        });
+        answers[0].GetComponent<Toggle>().isOn = true;
+    }
 
-        answer1Object.GetComponent<Toggle>().isOn = true;
-        answer2Object.GetComponent<Toggle>().isOn = false;
-        answer3Object.GetComponent<Toggle>().isOn = false;
-
+    /**
+     * Correctly position the GameObject 'answerObject' which represents a possible Answer to a question.
+     * The number of the answer is provided to help with the placement of the object., To modify the position,
+     * modify the attributes of the Transform component using answerObject.GetComponent<Transform>()
+     **/
+    private void Position(GameObject answerObject, int answerNumber)
+    {
+        throw new NotImplementedException();
     }
 
     private void EvaluateAnswer()
     {
-        if (answer1Object.GetComponent<Toggle>().isOn)
-        {
-            currentStats += GetStatsForAnswer(0);
-        }
-        else if (answer2Object.GetComponent<Toggle>().isOn)
-        {
-            currentStats += GetStatsForAnswer(1);
-        }
-        else
-        {
-            currentStats += GetStatsForAnswer(2);
-        }
-
+        AddStatsForAnswer();
         UpdateStatBars();
+    }
+
+    private void AddStatsForAnswer()
+    {
+        answers.ApplyWhileTrue((index, answer) =>
+        {
+            if (answer.GetComponent<Toggle>().isOn)
+            {
+                currentStats += GetStatsForAnswer(index);
+                return false;
+            }
+            return true;
+        });
     }
 
     private Stats GetStatsForAnswer(int index)

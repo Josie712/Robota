@@ -18,15 +18,12 @@ public class PlayAudio : MonoBehaviour
         source.clip = sound;
         source.playOnAwake = false;
 
-        button.onClick.AddListener(() => PlaySoud());
+        button.onClick.AddListener(PlaySound);
     }
 
-    // Update is called once per frame
-
-    void PlaySoud()
+    void PlaySound()
     {
         source.PlayOneShot(sound);
-
     }
 
 }
