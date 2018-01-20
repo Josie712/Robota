@@ -153,6 +153,7 @@ public class RobotBuild : MonoBehaviour {
         currentQuestion.answers.ForEach((answer) =>
         {
             GameObject answerObject = Instantiate(answerPrefab);
+            answerObject.transform.SetParent(answerPrefab.transform.parent, false);
             answers.Add(answerObject);
             answerObject.SetActive(true);
             Position(answerObject, answers.Count);
@@ -167,7 +168,8 @@ public class RobotBuild : MonoBehaviour {
      **/
     private void Position(GameObject answerObject, int answerNumber)
     {
-        throw new NotImplementedException();
+        //answerObject.transform.position = new Vector3(0, 0, 0);
+        //throw new NotImplementedException();
     }
 
     private void EvaluateAnswer()
