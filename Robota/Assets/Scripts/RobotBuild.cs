@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class RobotBuild : MonoBehaviour {
 
@@ -150,14 +151,16 @@ public class RobotBuild : MonoBehaviour {
         answers.ForEach<GameObject>(Destroy);
         answers.Clear();
 
-        currentQuestion.answers.ForEach((answer) =>
+        foreach (Answer answer in currentQuestion.answers)
         {
             GameObject answerObject = Instantiate(answerPrefab);
-            answerObject.transform.SetParent(answerPrefab.transform.parent, false);
             answers.Add(answerObject);
             answerObject.SetActive(true);
+            answerObject.GetComponent<Toggle>().onValueChanged.AddListener((value) => AnswerButtonClicked(answerObject));
+            answerObject.transform.SetParent(answerPrefab.transform.parent, false);
+            answerObject.GetComponentInChildren<Text>().text = answer.text;
             Position(answerObject, answers.Count);
-        });
+        }
         answers[0].GetComponent<Toggle>().isOn = true;
     }
 
