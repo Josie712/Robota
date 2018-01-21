@@ -1,5 +1,5 @@
 ﻿[System.Serializable]
-public class SentEmail : Email {
+public class ArchiveEmail : Email {
 
     public string recipient;
 	
