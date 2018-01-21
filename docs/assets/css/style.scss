@@ -1,0 +1,42 @@
+---
+---
+
+$header-heading-color: #fff !default;
+$header-bg-color: #00235d !default;
+$header-bg-color-secondary: #6c6b69 !default;
+
+$section-headings-color: #00235d !default;
+$body-text-color: #606c71 !default;
+$body-link-color: #1e6bb8 !default;
+$blockquote-text-color: #819198 !default;
+
+@font-face {
+    font-family: 'computer_pixel-7regular';
+    src: url('../fonts/computer_pixel-7-webfont.woff2') format('woff2'),
+         url('../fonts/computer_pixel-7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "{{ site.theme }}";
+
+h1, h2 {
+	font-family: "computer_pixel-7regular" !important;
+}
+
+h1 {
+	font-size: 4em !important;
+	text-align: center !important;
+}
+h1.project-name {
+	font-size: 5em !important;
+	line-height: 1 !important;
+}
+h2.project-tagline {
+	font-size: 2em !important;
+	margin-left: 5em !important;
+	margin-right: 5em !important;
+}
+p {
+	margin-bottom: 2em !important;
+}
