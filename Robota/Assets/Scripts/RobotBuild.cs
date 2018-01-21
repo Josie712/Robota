@@ -16,9 +16,6 @@ public class RobotBuild : MonoBehaviour {
     public GameObject legsObject;
 
     public GameObject nextButton;
-    public GameObject decisivenessBar;
-    public GameObject peopleSkillsBar;
-    public GameObject compertmentalizationBar;
     public GameObject partButtonsObject;
     public GameObject questionsPanelObject;
     public GameObject questionHeaderObject;
@@ -113,7 +110,7 @@ public class RobotBuild : MonoBehaviour {
          select part.GetComponent<Image>().sprite)
             .ForEach(AddStatsOfSprite);
 
-        UpdateStatBars();
+        Debug.Log(currentStats);
     }
 
     private void AddStatsOfSprite(Sprite sprite) {
@@ -122,13 +119,6 @@ public class RobotBuild : MonoBehaviour {
             statsToAdd = new Stats(0, 0, 0);
         }
         currentStats += statsToAdd;
-    }
-
-    private void UpdateStatBars() {
-        Stats stats = currentStats.AtLeastZero();
-        decisivenessBar.GetComponent<Slider>().value = stats.decisiveness;
-        peopleSkillsBar.GetComponent<Slider>().value = stats.peopleSkills;
-        compertmentalizationBar.GetComponent<Slider>().value = stats.compartmentalization;
     }
 
     private void DisplayNextQuestion() {
@@ -178,7 +168,6 @@ public class RobotBuild : MonoBehaviour {
     private void EvaluateAnswer()
     {
         AddStatsForAnswer();
-        UpdateStatBars();
     }
 
     private void AddStatsForAnswer()
@@ -192,6 +181,7 @@ public class RobotBuild : MonoBehaviour {
             }
             return true;
         });
+        Debug.Log(currentStats);
     }
 
     private Stats GetStatsForAnswer(int index)

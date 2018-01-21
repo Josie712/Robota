@@ -22,17 +22,12 @@ public class LevelSettings : MonoBehaviour {
     public GameObject emailText;
     public GameObject blueprintButton;
 
-    public GameObject decisivenessBar;
-    public GameObject peopleSkillsBar;
-    public GameObject compartmentalizationBar;
-
     private List<GameObject> receivedEmailButtons = new List<GameObject>();
     private List<GameObject> archiveEmailButtons = new List<GameObject>();
 
     private void Start()
     {
         InitializeEmail();
-        InitializeStatBars();
     }
 
     private void CreateReceivedEmailButtonFor(ReceivedEmail email)
@@ -107,13 +102,6 @@ public class LevelSettings : MonoBehaviour {
     {
         InitializeReceivedEmail();
         InitializeArchiveEmail();
-    }
-
-    private void InitializeStatBars()
-    {
-        decisivenessBar.GetComponent<Slider>().value = baseRobotStats.decisiveness;
-        peopleSkillsBar.GetComponent<Slider>().value = baseRobotStats.peopleSkills;
-        compartmentalizationBar.GetComponent<Slider>().value = baseRobotStats.compartmentalization;
     }
 
 }

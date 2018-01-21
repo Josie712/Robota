@@ -38,4 +38,9 @@ public class Stats {
             Math.Max(compartmentalization, 0));
     }
 
+    public override string ToString()
+    {
+        return "Stats(decisiveness = " + decisiveness + ", peopleSkills = " + peopleSkills + ", compartmentalization = " + compartmentalization + ")";
+    }
+
 }
