@@ -137,7 +137,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2486140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 217.27, y: 408.14996, z: 0}
+  m_LocalPosition: {x: 217.27, y: 106.888794, z: 0}
   m_LocalScale: {x: 1.581028, y: 1.581028, z: 1.581028}
   m_Children:
   - {fileID: 876749601}
@@ -965,7 +965,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120329245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.099, y: 165.12001, z: 0}
+  m_LocalPosition: {x: 82.09899, y: 165.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1423532030}
@@ -1148,75 +1148,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   receivedEmails:
   - subject: '[IMPORTANT] Instructions'
-    text: "My man! So how does the robot thingy work you ask? It\u2019s EASY! The
-      software is integrated to your computer and you can continue to use it as before.
-      You can still check e-mails from your clients and shit. So when you decide to
-      make a certain robot, just head to your desk and use the blueprint. The blueprint
-      lets you customize the physical appearance of the robot, which will not only
-      influence its physical capabilities (Duh!), but also its personality. However,
-      the core of its character will come from the second part of the process.  You
-      will be designing the artificial intelligence of the robot itself. Its BRAIN!
-      The system will pick three distinct personality traits based on the task of
-      the robot and it\u2019s your job to make its personality as balanced as possible.
-      But don\u2019t worry, if you mess up and make one of its traits more dominant,
-      the robot will still function, although it may function in an unexpected and
-      unintended way. FUN! You will be very pleased to hear that you will not always
-      be aware right away of exactly which personality traits you are trying to balance.
-      It\u2019s incredibly scientific! In fact, it is so scientific that I don\u2019t
-      think you would even understand if I tried to explain it to you. Try to do your
-      best and the robot will turn out great, trust me! As you can see, you made a
-      great decision to use my software. It\u2019s more fun than some dumb robot programming
-      with exact expectations. My five-year-old can do that! Even my robotic dog could
-      do that if he wasn\u2019t busy doing my taxes.  One million people in this shit-town
-      are trying to do the same thing over and over; cheaply make robots for some
-      companies that don\u2019t want to do it internally. Where is the mystery in
-      that? That\u2019s why I have always loved horoscopes and quizzes \u2013 the
-      mastery of science and the fog of mystery in one package! Enjoy it! Yours and
-      only, Naw Rufunds."
+    text: "My man!\r\n\nSo how does the robot thingy work you ask? It\u2019s EASY!
+      The software is integrated to your computer and you can continue to use it as
+      before. You can still check e-mails from your clients and shit. So when you
+      decide to make a certain robot, just head to your desk and use the blueprint.\n\r\nThe
+      blueprint lets you customize the physical appearance of the robot, which will
+      not only influence its physical capabilities (Duh!), but also its personality.
+      However, the core of its character will come from the second part of the process.
+      \r\n\nYou will be designing the artificial intelligence of the robot itself.
+      Its BRAIN! The system will pick three distinct personality traits based on the
+      task of the robot and it\u2019s your job to make its personality as balanced
+      as possible. But don\u2019t worry, if you mess up and make one of its traits
+      more dominant, the robot will still function, although it may function in an
+      unexpected and unintended way. FUN! You will be very pleased to hear that you
+      will not always be aware right away of exactly which personality traits you
+      are trying to balance. It\u2019s incredibly scientific! In fact, it is so scientific
+      that I don\u2019t think you would even understand if I tried to explain it to
+      you. Try to do your best and the robot will turn out great, trust me!\r\n\nAs
+      you can see, you made a great decision to use my software. It\u2019s more fun
+      than some dumb robot programming with exact expectations. My five-year-old can
+      do that! Even my robotic dog could do that if he wasn\u2019t busy doing my taxes.
+      \r\n\nOne million people in this shit-town are trying to do the same thing over
+      and over; cheaply make robots for some companies that don\u2019t want to do
+      it internally. Where is the mystery in that? That\u2019s why I have always loved
+      horoscopes and quizzes \u2013 the mastery of science and the fog of mystery
+      in one package!\r\n\nEnjoy it!\r\n\nYours and only,\r\nNaw Rufunds\r"
     sender: Naw Rufunds
     contract: 0
   - subject: '[MARKED AS SPAM] RUCA in danger! Call your senators and support robot
       rights!'
-    text: 'This message has been marked by our automatic systems as spam. For your
-      convenience we have deleted its content.   '
+    text: "This message has been marked by our automatic systems as spam. For your
+      convenience we have deleted its content.  \r"
     sender: 
     contract: 0
   - subject: '[CONTRACT] Consider yourself lucky!'
-    text: "Hey, Alex! You have not made my job easy since your portfolio is basically
+    text: "Hey, Alex!\r\n\nYou have not made my job easy since your portfolio is basically
       non-existent, but I have talked to my boss and arranged the contract for you.
-      It\u2019s a BIG! favor and I\u2019m counting on you doing your part!  Since
+      It\u2019s a BIG! favor and I\u2019m counting on you doing your part! \n\r\nSince
       the management is expecting the Robot Union Care Act to be called off, they
       are preparing the waters to increase the number of robot workers. The first
       robot they want to start with is a human resources manager. The management will
       probably want the robot to follow the crappy new guidelines, but I don\u2019t
       see why that\u2019s necessary. You know \u2013 make the robot at least usable
-      for the job. What do HR managers do anyway? Trevor P.S. It\u2019s off the books,
-      so we will talk about your pay after it\u2019s done. Don\u2019t worry, the company
-      is ready to offer you more work if it\u2019s good. "
+      for the job. What do HR managers do anyway?\r\n\nTrevor\r\n\nP.S. It\u2019s
+      off the books, so we will talk about your pay after it\u2019s done. Don\u2019t
+      worry, the company is ready to offer you more work if it\u2019s good.\r"
     sender: Trevor
     contract: 1
   - subject: '[FRIENDS AND FAMILY] RE: RE: RE: RE: RE: Up to something? '
     text: "Sorry for the short notice, but it would be for the best if you don\u2019t
-      come tomorrow.   Ben "
+      come tomorrow.  \r\nBen\r"
     sender: Ben
     contract: 0
   - subject: '[GOV] Claim your reward from the government! '
-    text: "Dear sir, I hope this letter finds you in a good health and in a mood for
-      you to hear about the benefits the government is offering to people as unfortunate
-      as you are.  Based on a special court ruling n. 175-698-2077 by Regional Court
-      of Zone B4-2 for Matters Concerning Divorce of Man and Woman you have, as of
-      the beginning of this month, become restricted in your legal capacity as a citizen.
-      You may think it will bring only discomfort and limitations to your life. I
-      am legally obliged to confirm your assumptions.  But do not despair, because
-      you are now eligible for Government Life Support Recreation Tickets each month!
-      \ Claim them in any government owned casino and enjoy discounted rates on beverages
-      and chips in our recreation complexes. You will be happy to find that these
-      tickets are also eligible for our specially sanctioned Government Licenced Pleasure
-      Agents \xA9!*  Best regards, Department of Social Issues by the Ministry of
-      Sports  *Your monthly ticket is valid for one quarter of a Government Licenced
-      Pleasure Session \xA9. Please be advised that the Regional Court will not accept
-      complaints regarding physiological disturbances caused by afore-mentioned sessions.
-      Terms and conditions apply. "
+    text: "Dear sir,\r\n\nI hope this letter finds you in a good health and in a mood
+      for you to hear about the benefits the government is offering to people as unfortunate
+      as you are. \r\n\nBased on a special court ruling n. 175-698-2077 by Regional
+      Court of Zone B4-2 for Matters Concerning Divorce of Man and Woman you have,
+      as of the beginning of this month, become restricted in your legal capacity
+      as a citizen. You may think it will bring only discomfort and limitations to
+      your life. I am legally obliged to confirm your assumptions. \r\n\nBut do not
+      despair, because you are now eligible for Government Life Support Recreation
+      Tickets each month!  Claim them in any government owned casino and enjoy discounted
+      rates on beverages and chips in our recreation complexes. You will be happy
+      to find that these tickets are also eligible for our specially sanctioned Government
+      Licenced Pleasure Agents \xA9!* \r\n\nBest regards,\r\nDepartment of Social
+      Issues by the Ministry of Sports \r\n\n*Your monthly ticket is valid for one
+      quarter of a Government Licenced Pleasure Session \xA9. Please be advised that
+      the Regional Court will not accept complaints regarding physiological disturbances
+      caused by afore-mentioned sessions. Terms and conditions apply.\r"
     sender: 'Department of Social Issues by the Ministry of Sports  '
     contract: 0
   archiveEmails: []
@@ -2191,7 +2191,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 317969666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 313.79352, z: 0}
+  m_LocalPosition: {x: 0, y: 119.333786, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1035491678}
@@ -2266,7 +2266,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 323336866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -165, y: -401.55, z: 0}
+  m_LocalPosition: {x: -165, y: -100.28882, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 737071778}
@@ -2773,7 +2773,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 402409901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 303.79352, z: 0}
+  m_LocalPosition: {x: 0, y: 109.33374, z: 0}
   m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_Children: []
   m_Father: {fileID: 1035491678}
@@ -6641,7 +6641,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 875568084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.899994, y: 0, z: 0}
+  m_LocalPosition: {x: 2.899994, y: -0.000015258789, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1741140556}
@@ -7330,7 +7330,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1035491677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.30963, y: -80.48166, z: 0}
+  m_LocalPosition: {x: 74.47923, y: 9.741653, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 317969667}
@@ -9457,7 +9457,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1400096570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -62.02002, z: 0}
+  m_LocalPosition: {x: 0, y: -62.020004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 380298537}
@@ -9625,7 +9625,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1423532029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21, y: -5.200012, z: 0}
+  m_LocalPosition: {x: 21, y: -5.199997, z: 0}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children:
   - {fileID: 120329246}
@@ -10012,7 +10012,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1482080436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.203003, y: -364.63, z: 0}
+  m_LocalPosition: {x: 172.203, y: -63.368835, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 609354815}
@@ -11337,7 +11337,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741140555}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 280, y: 493.5, z: 0}
+  m_LocalPosition: {x: 335, y: 161, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1733844609}
