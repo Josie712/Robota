@@ -183,7 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a2994db9d01ba41af14f2f9e201c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  video: {fileID: 32900000, guid: c7b3538aa236d0a4799085cc1df7610b, type: 3}
 --- !u!1 &1302651685
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +286,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
