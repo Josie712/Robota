@@ -16,8 +16,11 @@
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
-      {% if site.download %}
-        <a href="{{ site.download }}" class="btn">Download Game</a>
+      {% if site.download_win %}
+        <a href="{{ site.download_win }}" class="btn">Download Game (Windows)</a>
+      {% endif %}
+      {% if site.download_mac %}
+        <a href="{{ site.download_mac }}" class="btn">Download Game (Mac)</a>
       {% endif %}
       {% if site.show_downloads %}
         <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
