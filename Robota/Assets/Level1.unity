@@ -1146,6 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999c3b017f808494f8e2c34ebaf6d29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balanceThreshold: 2
   receivedEmails:
   - subject: '[IMPORTANT] Instructions'
     text: "My man!\r\n\nSo how does the robot thingy work you ask? It\u2019s EASY!

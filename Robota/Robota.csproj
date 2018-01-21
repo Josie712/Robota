@@ -229,6 +229,7 @@
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\RobotBuild.cs" />
     <Compile Include="Assets\Scripts\RobotConstruction\Answer.cs" />
+    <Compile Include="Assets\Scripts\RobotConstruction\HRStats.cs" />
     <Compile Include="Assets\Scripts\RobotConstruction\Question.cs" />
     <Compile Include="Assets\Scripts\RobotConstruction\RobotPart.cs" />
     <Compile Include="Assets\Scripts\RobotConstruction\Stats.cs" />

@@ -4,6 +4,6 @@
 public class Answer {
 
     public string text;
-    public Stats stats;
+    public HRStats stats;
 
 }

@@ -28,7 +28,7 @@ public class RobotBuild : MonoBehaviour {
 
     private int currentQuestionIndex;
     private Question currentQuestion;
-    private Stats currentStats;
+    private HRStats currentStats;
 
     public void UserClickPart() {
         RecalculateStats();
@@ -114,9 +114,9 @@ public class RobotBuild : MonoBehaviour {
     }
 
     private void AddStatsOfSprite(Sprite sprite) {
-        Stats statsToAdd = (from part in levelSettings.robotParts where part.sprite == sprite select part.stats).FirstOrDefault();
-        if (statsToAdd == default(Stats)) {
-            statsToAdd = new Stats(0, 0, 0);
+        HRStats statsToAdd = (from part in levelSettings.robotParts where part.sprite == sprite select part.stats).FirstOrDefault();
+        if (statsToAdd == default(HRStats)) {
+            statsToAdd = new HRStats(0, 0, 0);
         }
         currentStats += statsToAdd;
     }
@@ -184,7 +184,7 @@ public class RobotBuild : MonoBehaviour {
         Debug.Log(currentStats);
     }
 
-    private Stats GetStatsForAnswer(int index)
+    private HRStats GetStatsForAnswer(int index)
     {
         return currentQuestion.answers[index].stats;
     }

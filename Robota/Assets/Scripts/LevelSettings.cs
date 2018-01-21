@@ -8,10 +8,12 @@ public class LevelSettings : MonoBehaviour {
 
     private const float emailButtonsYOffset = -40f;
 
+    public int balanceThreshold; // if the difference of stats between the most and second most dominant stat is less than or equal to this, the robot is considered balanced
+
     public ReceivedEmail[] receivedEmails;
     public ArchiveEmail[] archiveEmails;
 
-    public Stats baseRobotStats;
+    public HRStats baseRobotStats;
     public RobotPart[] robotParts;
     public Question[] questions;
 
@@ -102,6 +104,26 @@ public class LevelSettings : MonoBehaviour {
     {
         InitializeReceivedEmail();
         InitializeArchiveEmail();
+    }
+
+    public int EvaluateRobot(Stats stats)
+    {
+        stats = stats.AtLeastZero();
+        List<KeyValuePair<int, int>> orderedStats = new List<KeyValuePair<int, int>>();
+
+        for (int i = 1; i <= stats.StatCount(); i++)
+        {
+            orderedStats.Add(new KeyValuePair<int, int>(stats.GetStatByIndex(i), i));
+        }
+        orderedStats.Sort((x, y) => x.Key.CompareTo(y.Key));
+        orderedStats.Reverse();
+
+        if (orderedStats[0].Key <= orderedStats[1].Key + balanceThreshold)
+        {
+            return 0;
+        }
+
+        return orderedStats[0].Value;
     }
 
 }

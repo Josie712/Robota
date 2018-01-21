@@ -4,7 +4,7 @@ using UnityEngine;
 [Serializable]
 public class RobotPart {
 
-    public Stats stats;
+    public HRStats stats;
     public Sprite sprite;
 	
 }
