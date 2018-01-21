@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LevelSettings : MonoBehaviour {
 
-    private const float emailButtonsOffset = -40f;
+    private const float emailButtonsYOffset = -40f;
 
     public ReceivedEmail[] receivedEmails;
     public ArchiveEmail[] archiveEmails;
@@ -38,7 +38,7 @@ public class LevelSettings : MonoBehaviour {
     private void CreateReceivedEmailButtonFor(ReceivedEmail email)
     {
         GameObject emailButton = Instantiate(emailButtonPrefab, incomingMailObject.transform, false);
-        emailButton.transform.Translate(new Vector3(0, emailButtonsOffset * receivedEmailButtons.Count, 0));
+        emailButton.transform.Translate(new Vector3(0, emailButtonsYOffset * receivedEmailButtons.Count, 0));
         receivedEmailButtons.Add(emailButton);
         emailButton.GetComponentInChildren<Text>().text = "Message " + receivedEmailButtons.Count;
         emailButton.SetActive(true);
@@ -73,7 +73,7 @@ public class LevelSettings : MonoBehaviour {
     private void CreateArchiveEmailButtonFor(ArchiveEmail email)
     {
         GameObject emailButton = Instantiate(emailButtonPrefab, archiveMailObject.transform, false);
-        emailButton.transform.Translate(new Vector3(0, emailButtonsOffset * archiveEmailButtons.Count, 0));
+        emailButton.transform.Translate(new Vector3(0, emailButtonsYOffset * archiveEmailButtons.Count, 0));
         archiveEmailButtons.Add(emailButton);
         emailButton.GetComponentInChildren<Text>().text = "Message " + archiveEmailButtons.Count;
         emailButton.SetActive(true);
