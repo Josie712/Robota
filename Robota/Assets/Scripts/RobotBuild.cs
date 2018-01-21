@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 public class RobotBuild : MonoBehaviour {
 
@@ -15,9 +14,12 @@ public class RobotBuild : MonoBehaviour {
     public GameObject armsObject;
     public GameObject legsObject;
 
+    public GameObject[] statBars;
+
     public GameObject nextButton;
     public GameObject partButtonsObject;
     public GameObject questionsPanelObject;
+    public GameObject evaluationPanelObject;
     public GameObject questionHeaderObject;
     public GameObject questionTextObject;
     public GameObject answersObject;
@@ -125,7 +127,7 @@ public class RobotBuild : MonoBehaviour {
         currentQuestionIndex++;
         if (currentQuestionIndex >= levelSettings.questions.Length)
         {
-            Debug.Log("Ran out of questions!");
+            EvaluateLevel();
             return;
         }
         currentQuestion = levelSettings.questions[currentQuestionIndex];
@@ -192,6 +194,26 @@ public class RobotBuild : MonoBehaviour {
     private void Start()
     {
         ResetQuestions();
+    }
+
+    private void EvaluateLevel()
+    {
+        nextButton.GetComponent<Button>().interactable = false;
+        questionsPanelObject.SetActive(false);
+        evaluationPanelObject.SetActive(true);
+
+        for (int i = 0; i < statBars.Length; i++)
+        {
+            var statBar = statBars[i];
+            statBar.GetComponent<Slider>().value = currentStats.GetStatByIndex(i+1);
+            statBar.GetComponentInChildren<Text>().text = currentStats.GetStatNameByIndex(i+1) + ": " + currentStats.GetStatByIndex(i+1);
+        }
+
+        PreviousLevel.headSprite = headObject.GetComponent<Image>().sprite;
+        PreviousLevel.torsoSprite = torsoObject.GetComponent<Image>().sprite;
+        PreviousLevel.armsSprite = armsObject.GetComponent<Image>().sprite;
+        PreviousLevel.legsSprite = legsObject.GetComponent<Image>().sprite;
+        PreviousLevel.outcome = levelSettings.balanceThreshold;
     }
 
 }

@@ -3,6 +3,8 @@
 [Serializable]
 public class HRStats : Stats {
 
+    private readonly string[] statNames = { "Decisiveness", "People Skills", "Compartmentalization" };
+
     public int decisiveness;
     public int peopleSkills;
     public int compartmentalization;
@@ -52,6 +54,11 @@ public class HRStats : Stats {
             case 3: return compartmentalization;
             default: throw new ArgumentOutOfRangeException("index", index, "Acceptable values are 1, 2, or 3.");
         }
+    }
+
+    public string GetStatNameByIndex(int index)
+    {
+        return statNames[index - 1];
     }
 
     public override string ToString()
