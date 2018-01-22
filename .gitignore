@@ -1,14 +1,9 @@
-/Robota/[Ll]ibrary/
-/Robota/[Tt]emp/
-/Robota/[Oo]bj/
-/Robota/[Bb]uild/
-/Robota/[Bb]uilds/
-/Assets/AssetStoreTools*
-
-# Caches and metadata
-/Robota/Library/ShaderCache
-/Robota/Library/PlayerDataCache
-/Robota/Library/metadata
+Robota/[Ll]ibrary/
+Robota/[Tt]emp/
+Robota/[Oo]bj/
+Robota/[Bb]uild/
+Robota/[Bb]uilds/
+Assets/AssetStoreTools*
 
 # Various logs
 *.log
