@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class RobotBuild : MonoBehaviour {
 
-    public LevelSettings levelSettings;
+    public Level1Settings levelSettings;
 
     public GameObject headObject;
     public GameObject torsoObject;
@@ -111,8 +111,6 @@ public class RobotBuild : MonoBehaviour {
         (from part in partObjects
          select part.GetComponent<Image>().sprite)
             .ForEach(AddStatsOfSprite);
-
-        Debug.Log(currentStats);
     }
 
     private void AddStatsOfSprite(Sprite sprite) {
@@ -213,7 +211,7 @@ public class RobotBuild : MonoBehaviour {
         PreviousLevel.torsoSprite = torsoObject.GetComponent<Image>().sprite;
         PreviousLevel.armsSprite = armsObject.GetComponent<Image>().sprite;
         PreviousLevel.legsSprite = legsObject.GetComponent<Image>().sprite;
-        PreviousLevel.outcome = levelSettings.balanceThreshold;
+        PreviousLevel.outcome = levelSettings.EvaluateRobot(currentStats);
     }
 
 }

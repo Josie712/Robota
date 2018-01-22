@@ -7,4 +7,5 @@ public static class PreviousLevel
     public static Sprite armsSprite;
     public static Sprite legsSprite;
     public static int outcome;
+    public static Email[] previousEmail;
 }

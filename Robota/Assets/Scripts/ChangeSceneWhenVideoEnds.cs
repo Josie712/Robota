@@ -8,12 +8,21 @@ public class ChangeSceneWhenVideoEnds : MonoBehaviour {
 
 	void Start () {
         double videoLength = GetComponent<VideoPlayer>().clip.length;
-        StartCoroutine(ChangeSceneAfterSeconds(videoLength, LEVEL_1_SCENE));
+        StartCoroutine(ChangeSceneAfterSeconds(videoLength));
 	}
 
-    private IEnumerator ChangeSceneAfterSeconds(double seconds, string scene)
+    private void Update()
+    {
+        if (Input.anyKeyDown)
+        {
+            StopAllCoroutines();
+            SceneManager.LoadScene(LEVEL_1_SCENE);
+        }
+    }
+
+    private IEnumerator ChangeSceneAfterSeconds(double seconds)
     {
         yield return new WaitForSeconds((float) seconds);
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(LEVEL_1_SCENE);
     }
 }
