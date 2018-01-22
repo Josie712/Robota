@@ -14,7 +14,7 @@ public class Level2Settings : MonoBehaviour {
     public ReceivedEmail[] receivedEmails;
     public ArchiveEmail[] archiveEmails;
 
-    public PIStats baseRobotStats;
+    public HRStats baseRobotStats;
     public RobotPart[] robotParts;
     public Question[] questions;
 

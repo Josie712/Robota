@@ -250,7 +250,7 @@
     <Compile Include="Assets\Scripts\NewsArticle.cs" />
     <Compile Include="Assets\Scripts\PlayAudio.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
-    <Compile Include="Assets\Scripts\RobotBuild.cs" />
+    <Compile Include="Assets\Scripts\RobotBuild1.cs" />
     <Compile Include="Assets\Scripts\RobotConstruction\Answer.cs" />
     <Compile Include="Assets\Scripts\RobotConstruction\HRStats.cs" />
     <Compile Include="Assets\Scripts\RobotConstruction\PIStats.cs" />
