@@ -4,7 +4,7 @@ using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 
 public class ChangeSceneWhenVideoEnds : MonoBehaviour {
-    private const string LEVEL_1_SCENE = "Level1";
+    public string LEVEL_1_SCENE;
 
 	void Start () {
         double videoLength = GetComponent<VideoPlayer>().clip.length;

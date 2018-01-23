@@ -17,3 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level2.unity
     guid: a04f687af1b28fc4bb445ad3f1d9fe28
+  - enabled: 1
+    path: Assets/Level3.unity
+    guid: bd30514455feb4b8db120f293eb0ace5
+  - enabled: 1
+    path: Assets/Level4.unity
+    guid: e12fa1324a5454b0ea114297e9b54352
+  - enabled: 1
+    path: Assets/OutroScene.unity
+    guid: 71e1c7da730254d91aabf05a225dc8ef

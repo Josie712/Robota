@@ -23,6 +23,8 @@ public class Level1Settings : MonoBehaviour {
     public GameObject emailButtonPrefab;
     public GameObject emailSubject;
     public GameObject emailText;
+    public GameObject archiveEmailSubject;
+    public GameObject archiveEmailText;
     public GameObject blueprintButton;
 
     
@@ -112,8 +114,8 @@ public class Level1Settings : MonoBehaviour {
 
         emailButton.GetComponent<Button>().onClick.AddListener(() =>
         {
-            emailSubject.GetComponent<Text>().text = email.subject;
-            emailText.GetComponent<Text>().text = email.text;
+            archiveEmailSubject.GetComponent<Text>().text = email.subject;
+            archiveEmailText.GetComponent<Text>().text = email.text;
         });
     }
 
@@ -132,6 +134,9 @@ public class Level1Settings : MonoBehaviour {
             GameObject emailButton = Instantiate(emailButtonPrefab, archiveMailObject.transform, false);
             emailButton.SetActive(true);
             emailButton.GetComponentInChildren<Text>().text = "No messages";
+        }else
+        {
+            archiveEmailButtons[0].GetComponent<Button>().onClick.Invoke();
         }
     }
 
